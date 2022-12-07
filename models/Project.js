@@ -11,11 +11,12 @@ Project.init(
             primaryKey: true,
             autoIncrement: true,
         },
-        name: {
-            type: DataTypes.STRING,
-        },
         subject: {
             type: DataTypes.STRING,
+        },
+        content: {
+            type: DataTypes.STRING,
+            allowNull: false,
         },
         date_created: {
             type: DataTypes.DATE,

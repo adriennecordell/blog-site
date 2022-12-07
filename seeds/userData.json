@@ -1,0 +1,22 @@
+[
+    {
+        "name": "Shirley",
+        "email": "shirleybakes@hotmail.com",
+        "password": "baker101"
+    },
+    {
+        "name": "hank",
+        "email": "hankshops@gmail.com",
+        "password": "giver404"
+    },
+    {
+        "name": "carlos",
+        "email": "carlosrivera@yahoo.com",
+        "password": "freespirit123"
+    },
+    {
+        "name": "ted",
+        "email": "tedskills@gmail.com",
+        "password": "thinker333"
+    }
+]
