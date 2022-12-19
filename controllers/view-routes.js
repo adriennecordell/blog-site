@@ -1,10 +1,10 @@
 const router = require('express').Router();
-const{ project, User } = require('../models')
+const{ post, User } = require('../models')
 
 router.get('/', async (req, res) => {
     try {
-        let projects = await project.findAll()
-        projects = projects.map(project => project.get({ plain: true }))
+        let posts = await post.findAll()
+        posts = posts.map(post => post.get({ plain: true }))
         res.render('home', {
             projects,
             logged_in: res.session.logged_in
@@ -16,11 +16,11 @@ router.get('/', async (req, res) => {
 
 router.get('/project/:id', async (req, res) => {
     try {
-        let project = await Project.findByPk(req.params.id)
-        project = project.get({ plain: true })
+        let post = await post.findByPk(req.params.id)
+        project = post.get({ plain: true })
 
-        res.render('project', {
-            project, 
+        res.render('post', {
+            post, 
             logged_in: req.session.logged_in
         })
 
