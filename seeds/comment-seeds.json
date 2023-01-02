@@ -1,2 +1,23 @@
 [
+    {
+        "comment_text": "Thank you!!",
+        "post_id": 2,
+        "user_id": 3
+    },
+    {
+         "comment_text": "I disagree",
+        "post_id": 2,
+        "user_id": 3
+    },
+    {
+         "comment_text": "Can you elaborate?",
+        "post_id": 2,
+        "user_id": 3
+    },
+    {
+         "comment_text": "what",
+        "post_id": 2,
+        "user_id": 3
+    }
+]
   
