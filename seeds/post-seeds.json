@@ -1,0 +1,25 @@
+[
+    {
+        "title": "Three great resources to practice code!",
+        "post-content": "Three great resources to practice code!",
+        "user_id": 3
+    },
+    {
+        "title": "How to kill a technical coding interview!",
+        "post_content": "Be confident, Think through the problem outloud, Know your stuff!",
+        "user_id": 2
+    },
+    {
+        "title": "Is Python the coding language of 2022?",
+        "post_content": "Python is a language growing in popularity...",
+        "user_id": 1
+    },
+    {
+        "title": "Tips to a successful group project using Github!",
+        "post_content": "One major tool to a successful group project is collaboration and Github helps with that.",
+        "user_id": 3
+    }
+]
+
+
+     
