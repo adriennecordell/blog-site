@@ -120,7 +120,7 @@ router.delete('/:id', withAuth, (req, res) => {
     })
         .then(dbPostData => {
             if (!dbPostData) {
-                res.status(404).json({ message: 'No post found!' });
+                res.status(404).json({ message: 'No post found with this id' });
                 return;
             }
             res.json(dbPostData);
@@ -129,13 +129,6 @@ router.delete('/:id', withAuth, (req, res) => {
             console.log(err);
             res.status(500).json(err);
         });
-});
-
-module.exports = router;
-        res.status(200).json(postData);
-    } catch (err) {
-        res.status(500).json(err);
-    }
 });
 
 module.exports = router;
