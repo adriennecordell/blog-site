@@ -1,40 +1,25 @@
-const loginForm = document.getElementById('login');
-const signupForm = document.getElementById('signup');
+async function loginFormHandler(event) {
+    event.preventDefault();
 
-const handleSubmit = event => {
-    event.preventDefault()
+    const username = document.querySelector('#username-login').value.trim();
+    const password = document.querySelector('#password-login').value.trim();
 
-    const formId = event.target.id
-    const url = formId === 'signup'
-        ? '/api/users'
-        : 'api/users/login'
+    if (username && password) {
+        const response = await fetch('/api/users/login', {
+            method: 'post',
+            body: JSON.stringify({
+                username,
+                password
+            }),
+            headers: { 'Content-Type': 'application/json' }
+        });
 
-    const {
-        name: nameInput,
-        email: emailInput,
-        password: passwordInput
-    } = event.target.elements
-
-    const userData = {
-        name: nameInput.value,
-        email: emailInput.value,
-        password: passwordInput.value
-    }
-
-    fetch(url, {
-        method: 'POST',
-        headers: {
-            'Content-Type': 'application/json'
-        },
-        body: JSON.stringify(userData)
-    })
-    .then(response => {
-        if (response.status === 200) {
-            window.location.href = '/'
+        if (response.ok) {
+            document.location.replace('/dashboard');
+        } else {
+            alert(response.statusText);
         }
-    })
-    .catch(err => console.log(err))
+    }
 }
 
-loginForm.addEventListener('submit', handleSubmit)
-signupForm.addEventListener('submit', handleSubmit)
+document.querySelector('.login-form').addEventListener('submit', loginFormHandler);
