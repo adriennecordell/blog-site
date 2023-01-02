@@ -1,13 +1,14 @@
-document.getElementById('logout').addEventListener('click', e => {
-    e.preventDefault()
+async function logout() {
+    const response = await fetch('/api/users/logout', {
+        method: 'post',
+        headers: { 'Content-Type': 'allication/json' }
+    });
 
-    fetch('/api/users/logout', {
-        method: "POST"
-    })
-    .then(response => {
-        if (response.ok) {
-            window.location.href = '/login'
-        }
-    })
-    .catch(err => console.log(err))
-})
+    if (response.ok) {
+        document.location.replace('/');
+    } else {
+        alert(response.statusText);
+    }
+}
+
+document.querySelector('#logout').addEventListener('click', logout);
