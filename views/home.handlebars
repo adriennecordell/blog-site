@@ -1,7 +1,7 @@
-<h1>Our Posts</h1>
-
-<h1>{{post.subject}}</h1>
-
-<p>{{<post.content}}</p>
-
-<p>{{post.date_created}}</p>
+<ol class="post-list">
+    {{#each posts as |post|}}
+    <li>
+        {{> post-info post}}
+    </li>
+    {{/each}}
+</ol>
