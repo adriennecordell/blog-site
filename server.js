@@ -14,7 +14,10 @@ app.use(session({
     secret: 'Super secret',
     resave: false,
     saveUninitialized: true,
-    cookie: { secure: true }
+    cookie: {},
+    store: new SequelizeStore({
+        db: sequelize
+    })
   }))
 
 const helpers = require('./utils/helpers');

@@ -1,9 +1,8 @@
 const router = require('express').Router();
 const { Post, User, Comment } = require('../models');
 
-// gets all posts for the homepage
 router.get('/', (req, res) => {
-    console.log('======================');
+    console.log('homepage!');
     Post.findAll({
         attributes: [
             'id',
@@ -28,9 +27,9 @@ router.get('/', (req, res) => {
     .then(dbPostData => {
         const posts = dbPostData.map(post => post.get({ plain: true }));
     
-        res.render('homepage', {
-            posts,
-            loggedIn: req.session.loggedIn
+        res.render('homepage', { posts
+            // posts,
+            // loggedIn: req.session.loggedIn
         });
     })
     .catch(err => {
@@ -67,7 +66,7 @@ router.get('/post/:id', (req, res) => {
     })
         .then(dbPostData => {
             if (!dbPostData) {
-                res.status(404).json({ message: 'No post found with this id' });
+                res.status(404).json({ message: 'No post' });
                 return;
             }
 
