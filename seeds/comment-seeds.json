@@ -2,12 +2,12 @@
     {
         "comment_text": "Thank you!!",
         "post_id": 2,
-        "user_id": 3
+        "user_id": 2
     },
     {
          "comment_text": "I disagree",
         "post_id": 2,
-        "user_id": 3
+        "user_id": 1
     },
     {
          "comment_text": "Can you elaborate?",
@@ -17,7 +17,7 @@
     {
          "comment_text": "what",
         "post_id": 2,
-        "user_id": 3
+        "user_id": 4
     }
 ]
   

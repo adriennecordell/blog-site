@@ -17,18 +17,6 @@ app.use(session({
     cookie: { secure: true }
   }))
 
-// const sess = {
-//     secret: 'Super secret secret',
-//     cookie: {},
-//     resave: false,
-//     saveUnitialized: true,
-//     store: new SequelizeStore({
-//         db: sequelize
-//     })
-// };
-
-// app.use(session(sess));
-
 const helpers = require('./utils/helpers');
 
 const hbs = exphbs.create({ helpers });
